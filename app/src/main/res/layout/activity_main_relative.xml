@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/tvBillTotal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="14dp"
+        android:layout_marginTop="26dp"
+        android:text="@string/billTotal" />
+
+    <EditText
+        android:id="@+id/etBillValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="43dp"
+        android:layout_toEndOf="@+id/tvBillTotal"
+        android:ems="10"
+        android:hint="@string/enterBillValue"
+        android:inputType="number"
+        android:digits="0123456789"/>
+
+    <TextView
+        android:id="@+id/tvTipPercent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/tvBillTotal"
+        android:layout_below="@+id/etBillValue"
+        android:layout_marginTop="63dp"
+        android:text="@string/tipPercent" />
+
+    <RadioGroup
+        android:id="@+id/radioGroupTip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignTop="@+id/tvTipPercent"
+        android:layout_marginEnd="46dp"
+        android:checkedButton="@+id/rb10"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/rb10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/tenPercent" />
+
+        <RadioButton
+            android:id="@+id/rb15"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="@string/fifteenPercent" />
+
+        <RadioButton
+            android:id="@+id/rb18"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/eighteenPercent" />
+
+        <RadioButton
+            android:id="@+id/rbCustom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/custom" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/tvCustom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/tvTipPercent"
+        android:layout_below="@+id/radioGroupTip"
+        android:layout_marginTop="45dp"
+        android:text="@string/custom" />
+
+    <SeekBar
+        android:id="@+id/seekBarCustom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/radioGroupTip"
+        android:layout_alignStart="@+id/radioGroupTip"
+        android:layout_alignTop="@+id/tvCustom"
+        android:max="@integer/seekBarMax"
+        android:progress="25"/>
+
+    <TextView
+        android:id="@+id/tvSeekBarValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignTop="@+id/seekBarCustom"
+        android:text="@string/twentyFivePercent" />
+
+    <TextView
+        android:id="@+id/tvTip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/tvCustom"
+        android:layout_below="@+id/tvCustom"
+        android:layout_marginTop="47dp"
+        android:text="@string/tip" />
+
+    <TextView
+        android:id="@+id/tvTipValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/seekBarCustom"
+        android:layout_alignTop="@+id/tvTip"
+        android:text="@string/tipValue" />
+
+    <TextView
+        android:id="@+id/tvTotal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/tvTip"
+        android:layout_below="@+id/tvTip"
+        android:layout_marginTop="36dp"
+        android:text="@string/total" />
+
+    <TextView
+        android:id="@+id/tvTotalValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/tvTotal"
+        android:layout_alignStart="@+id/tvTipValue"
+        android:text="@string/tipValue" />
+
+    <Button
+        android:id="@+id/buttonExit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/tvTotal"
+        android:layout_marginTop="69dp"
+        android:text="@string/exit" />
+
+</RelativeLayout>
